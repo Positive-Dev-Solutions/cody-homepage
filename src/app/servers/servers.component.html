@@ -13,10 +13,7 @@
 </form>
 
 <p>{{ someText }}</p>
-<p *ngIf="isDuplicateClicked; else notDuplicated">Duplicate attempted</p>
-<ng-template #notDuplicated>
-  <p>Duplicate not attempted yet</p>
-</ng-template>
+<p *ngIf="isDuplicateClicked">Duplicate attempted</p>
 <button
   mat-raised-button
   (click)="onDuplicateComponent()">Duplicate component</button>
