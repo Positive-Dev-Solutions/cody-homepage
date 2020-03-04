@@ -1,6 +1,38 @@
-<button mat-fab>Stuff</button>
-<button mat-icon-button color="primary" [disabled]="isDisableTestOn">
-  <mat-icon>favorite</mat-icon>
-</button>
+
+<form>
+  <mat-form-field>
+    <mat-label>Enter some text</mat-label>
+    <input
+      matInput
+      placeholder="testing"
+      [(ngModel)]="someText"
+      [ngModelOptions]="{standalone: true}">
+      <!-- (input)="onTypingStuff($event)"> -->
+      <!-- [(ngModel)]="someText"> -->
+  </mat-form-field>
+</form>
+
+<input
+      type="text"
+      [(ngModel)]="someText">
+<button
+  mat-raised-button
+  (click)="onDuplicateComponent()">Duplicate component</button>
+
+<button
+  mat-fab
+  (click)="onStuff('stuff')">Stuff</button>
+<button
+  mat-icon-button
+  (click)="onLoveIt()"
+  color="primary"
+  [disabled]="isDisableTestOn">
+    <mat-icon>favorite</mat-icon>
+  </button>
+
+<p>{{ someText }}</p>
+
+<div
+  [innerHTML]="loveIt"></div>
 <app-server></app-server>
 <app-server></app-server>

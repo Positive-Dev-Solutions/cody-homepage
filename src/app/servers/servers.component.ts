@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
   isDisableTestOn = true;
+  someText = "This is a test of some text";
+  loveIt = "Love it &hearts;";
 
   constructor() {
     setTimeout(() => {
@@ -15,6 +17,22 @@ export class ServersComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  onDuplicateComponent() {
+
+  }
+
+  onTypingStuff(event: Event) {
+      this.someText = (<HTMLInputElement>event.target).value;
+  }
+
+  onStuff(s: string) {
+    this.someText = "Clicking Stuff resets... ya know... " + s;
+  }
+
+  onLoveIt() {
+    this.loveIt = "&#128150;";
   }
 
 }
