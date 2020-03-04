@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
   isDisableTestOn = true;
+  isDuplicateClicked = false;
   someText = "This is a test of some text";
   loveIt = "Love it &hearts;";
 
@@ -20,11 +21,11 @@ export class ServersComponent implements OnInit {
   }
 
   onDuplicateComponent() {
-
+    this.isDuplicateClicked = true;
   }
 
   onTypingStuff(event: Event) {
-      this.someText = (<HTMLInputElement>event.target).value;
+    this.someText = (<HTMLInputElement>event.target).value;
   }
 
   onStuff(s: string) {

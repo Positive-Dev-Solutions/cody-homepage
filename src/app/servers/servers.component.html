@@ -12,9 +12,11 @@
   </mat-form-field>
 </form>
 
-<input
-      type="text"
-      [(ngModel)]="someText">
+<p>{{ someText }}</p>
+<p *ngIf="isDuplicateClicked; else notDuplicated">Duplicate attempted</p>
+<ng-template #notDuplicated>
+  <p>Duplicate not attempted yet</p>
+</ng-template>
 <button
   mat-raised-button
   (click)="onDuplicateComponent()">Duplicate component</button>
@@ -29,8 +31,6 @@
   [disabled]="isDisableTestOn">
     <mat-icon>favorite</mat-icon>
   </button>
-
-<p>{{ someText }}</p>
 
 <div
   [innerHTML]="loveIt"></div>
