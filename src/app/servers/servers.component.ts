@@ -10,6 +10,7 @@ export class ServersComponent implements OnInit {
   isDuplicateClicked = false;
   someText = "This is a test of some text";
   loveIt = "Love it &hearts;";
+  servers = ["blah", "test"];
 
   constructor() {
     setTimeout(() => {
@@ -22,6 +23,7 @@ export class ServersComponent implements OnInit {
 
   onDuplicateComponent() {
     this.isDuplicateClicked = true;
+    this.servers.push(this.someText);
   }
 
   onTypingStuff(event: Event) {

@@ -13,11 +13,6 @@
 </form>
 
 <p>{{ someText }}</p>
-<p *ngIf="isDuplicateClicked">Duplicate attempted</p>
-<button
-  mat-raised-button
-  (click)="onDuplicateComponent()">Duplicate component</button>
-
 <button
   mat-fab
   (click)="onStuff('stuff')">Stuff</button>
@@ -29,7 +24,12 @@
     <mat-icon>favorite</mat-icon>
   </button>
 
-<div
+  <div
   [innerHTML]="loveIt"></div>
-<app-server></app-server>
-<app-server></app-server>
+
+
+<p *ngIf="isDuplicateClicked">Duplicate attempted</p>
+<button
+  mat-raised-button
+  (click)="onDuplicateComponent()">Duplicate component</button>
+<app-server *ngFor="let server of servers"></app-server>
