@@ -6,15 +6,19 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ServerComponent } from './server/server.component';
-import { ServersComponent } from './servers/servers.component';
+import { HeaderComponent } from './header/header.component';
 import { MaterialModule } from './material.module';
+import { PanelComponent } from './panel/panel.component';
+import { MediumCardComponent } from './medium-card/medium-card.component';
+import { SmallCardComponent } from './small-card/small-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ServerComponent,
-    ServersComponent
+    HeaderComponent,
+    PanelComponent,
+    MediumCardComponent,
+    SmallCardComponent
   ],
   imports: [
     FormsModule,
