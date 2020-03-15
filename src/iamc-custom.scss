@@ -7,6 +7,7 @@ $iamc-accent:  mat-palette($mat-deep-purple, A400);
 $iamc-warn:    mat-palette($mat-red);
 
 $iamc-theme: mat-light-theme($iamc-primary, $iamc-accent, $iamc-warn);
+$iamc-theme-dark: mat-dark-theme($iamc-primary, $iamc-accent, $iamc-warn);
 
 
-@include angular-material-theme($iamc-theme);
+@include angular-material-theme($iamc-theme-dark);
